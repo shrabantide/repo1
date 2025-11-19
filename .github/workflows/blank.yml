@@ -1,0 +1,11 @@
+name: Get Weather (Open-Meteo)
+
+on: workflow_dispatch
+
+jobs:
+  weather:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch weather data
+        run: |
+          curl "https://api.open-meteo.com/v1/forecast?latitude=22.5&longitude=88.3&current_weather=true"
